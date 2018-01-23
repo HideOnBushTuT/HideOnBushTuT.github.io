@@ -1,136 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>[笔记]IM相关知识 | CBReno&#39;s Blog</title>
+    <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="本文是对于《iOS即时通讯，从入门到“放弃”？》涂耀辉  中即时通讯相关知识的总结，方便自己理解，如需更多了解，请看原文，如有侵权，请告知">
-<meta property="og:type" content="article">
-<meta property="og:title" content="[笔记]IM相关知识">
-<meta property="og:url" content="http://yoursite.com/2017/07/13/笔记-IM相关知识/index.html">
-<meta property="og:site_name" content="CBReno&#39;s Blog">
-<meta property="og:description" content="本文是对于《iOS即时通讯，从入门到“放弃”？》涂耀辉  中即时通讯相关知识的总结，方便自己理解，如需更多了解，请看原文，如有侵权，请告知">
-<meta property="og:updated_time" content="2017-07-13T08:53:32.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[笔记]IM相关知识">
-<meta name="twitter:description" content="本文是对于《iOS即时通讯，从入门到“放弃”？》涂耀辉  中即时通讯相关知识的总结，方便自己理解，如需更多了解，请看原文，如有侵权，请告知">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="Welcome !~">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="[笔记]IM相关知识 | CBReno&#39;s Blog">
+    <meta name="twitter:description" content="Welcome !~">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="[笔记]IM相关知识 | CBReno&#39;s Blog">
+    <meta property="og:description" content="Welcome !~">
+
     
+    <meta name="author" content="CBReno">
     
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-          
-        
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
     
-    <!-- title -->
-    <title>[笔记]IM相关知识</title>
-    <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- rss -->
+    <link rel="icon" href="/images/cbreno.jpg">
     
+
+    <meta name="generator" content="hexo"/>
+    
+
+    <link rel="canonical" href="http://yoursite.com/2017/07/13/笔记-IM相关知识/"/>
+
     
 </head>
 
-<body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/posts/">Writing</a></li>
-         
-          <li><a href="http://github.com/sergodeeva">Projects</a></li>
-        
-      </ul>
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
     </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/2017/08/06/ReSwift-Tutorial-Memory-Game-App/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" href="/2017/07/02/iOS小知识-load-initialize/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/07/13/笔记-IM相关知识/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&text=[笔记]IM相关知识"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&is_video=false&description=[笔记]IM相关知识"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=[笔记]IM相关知识&body=Check out this article: http://yoursite.com/2017/07/13/笔记-IM相关知识/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&name=[笔记]IM相关知识&description=&lt;p&gt;&lt;strong&gt;本文是对于&lt;a href=&#34;http://www.jianshu.com/p/2dbb360886a8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《iOS即时通讯，从入门到“放弃”？》涂耀辉 &lt;/a&gt; 中即时通讯相关知识的总结，方便自己理解，如需更多了解，请看原文，如有侵权，请告知&lt;/strong&gt;&lt;/p&gt;"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#传输协议"><span class="toc-number">1.</span> <span class="toc-text">传输协议</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#聊天协议"><span class="toc-number">2.</span> <span class="toc-text">聊天协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单的-IM-客户端需要做的事情："><span class="toc-number">2.0.1.</span> <span class="toc-text">简单的 IM 客户端需要做的事情：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器所需要做的工作："><span class="toc-number">2.0.2.</span> <span class="toc-text">服务器所需要做的工作：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#心跳"><span class="toc-number">2.0.3.</span> <span class="toc-text">心跳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NAT-超时"><span class="toc-number">2.0.4.</span> <span class="toc-text">NAT 超时</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PingPong-机制"><span class="toc-number">2.0.5.</span> <span class="toc-text">PingPong 机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重连机制"><span class="toc-number">2.0.6.</span> <span class="toc-text">重连机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输格式"><span class="toc-number">2.1.</span> <span class="toc-text">传输格式</span></a></li></ol></li></ol>
-    </div>
-  </span>
-</div>
 
     
-    <div class="content index width mx-auto px2 my4">
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 CBReno&#39;s Blog 的主页"><img src="/images/cbreno.jpg" width="80" alt="CBReno&#39;s Blog logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for CBReno&#39;s Blog">CBReno&#39;s Blog</a></h1>
         
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle" itemprop="name headline">
-        [笔记]IM相关知识
-    </h1>
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">Welcome !~</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/CBReno" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
 
 
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/HideOnBushTuT" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
 
-    <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">CBReno's Blog</span>
-      </span>
-      
-    <div class="postdate">
-        <time datetime="2017-07-13T08:38:19.000Z" itemprop="datePublished">2017-07-13</time>
-    </div>
 
+<!-- Stack Overflow -->
+        
 
-      
-
-    </div>
-  </header>
+  <!-- Google Plus -->
   
 
-  <div class="content" itemprop="articleBody">
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-blue"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-07-13T08:38:19.000Z" class="post-list__meta--date date">2017-07-13</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">[笔记]IM相关知识</h1>
+  </header>
+
+  <section class="post">
     <p><strong>本文是对于<a href="http://www.jianshu.com/p/2dbb360886a8" target="_blank" rel="noopener">《iOS即时通讯，从入门到“放弃”？》涂耀辉 </a> 中即时通讯相关知识的总结，方便自己理解，如需更多了解，请看原文，如有侵权，请告知</strong> <a id="more"></a></p>
 <h1 id="传输协议"><a href="#传输协议" class="headerlink" title="传输协议"></a>传输协议</h1><ul>
 <li>TCP</li>
@@ -182,108 +185,32 @@
 <li>XML</li>
 </ul>
 
-  </div>
+  </section>
+
 </article>
 
 
 
-    </div>
-    
-      <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/posts/">Writing</a></li>
-         
-          <li><a href="http://github.com/sergodeeva">Projects</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#传输协议"><span class="toc-number">1.</span> <span class="toc-text">传输协议</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#聊天协议"><span class="toc-number">2.</span> <span class="toc-text">聊天协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单的-IM-客户端需要做的事情："><span class="toc-number">2.0.1.</span> <span class="toc-text">简单的 IM 客户端需要做的事情：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器所需要做的工作："><span class="toc-number">2.0.2.</span> <span class="toc-text">服务器所需要做的工作：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#心跳"><span class="toc-number">2.0.3.</span> <span class="toc-text">心跳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NAT-超时"><span class="toc-number">2.0.4.</span> <span class="toc-text">NAT 超时</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PingPong-机制"><span class="toc-number">2.0.5.</span> <span class="toc-text">PingPong 机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重连机制"><span class="toc-number">2.0.6.</span> <span class="toc-text">重连机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输格式"><span class="toc-number">2.1.</span> <span class="toc-text">传输格式</span></a></li></ol></li></ol>
-    </div>
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/07/13/笔记-IM相关知识/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&text=[笔记]IM相关知识"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&is_video=false&description=[笔记]IM相关知识"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=[笔记]IM相关知识&body=Check out this article: http://yoursite.com/2017/07/13/笔记-IM相关知识/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&title=[笔记]IM相关知识"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/07/13/笔记-IM相关知识/&name=[笔记]IM相关知识&description=&lt;p&gt;&lt;strong&gt;本文是对于&lt;a href=&#34;http://www.jianshu.com/p/2dbb360886a8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《iOS即时通讯，从入门到“放弃”？》涂耀辉 &lt;/a&gt; 中即时通讯相关知识的总结，方便自己理解，如需更多了解，请看原文，如有侵权，请告知&lt;/strong&gt;&lt;/p&gt;"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
-        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy; 2018 CBReno
-  </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/posts/">Writing</a></li>
-         
-          <li><a href="http://github.com/sergodeeva">Projects</a></li>
-        
-      </ul>
-    </nav>
-  </div>
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2018 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
 </footer>
 
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
 </body>
 </html>
-<!-- styles -->
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-
-<!-- jquery -->
-<script src="/lib/jquery/jquery.min.js"></script>
-<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- search -->
-
-<!-- Google Analytics -->
-
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-37473492-6', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-<!-- Disqus Comments -->
-
-
