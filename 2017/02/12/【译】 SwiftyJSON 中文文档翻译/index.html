@@ -65,7 +65,7 @@
           <div>
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="/#blog" title="Blogを読む" class="blog-button">Blog</a></li>
+              <li class="navigation__item"><a href="/#blog" title="Visit the blog" class="blog-button">Blog</a></li>
             
               <li class="navigation__item"><a href="/aboutme">关于我</a></li>
             
@@ -133,7 +133,7 @@
     <div class="post-meta">
       <time datetime="2017-02-12T15:36:32.000Z" class="post-list__meta--date date">2017-02-12</time> &#8226; <span class="post-meta__tags tags">于  </span>
       <span class="page-pv">
-       No. <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+       Read <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
@@ -264,7 +264,7 @@
 </ul>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> dict = [<span class="string">"1"</span>:<span class="number">2</span>, <span class="string">"2"</span>:<span class="string">"two"</span>, <span class="string">"3"</span>: <span class="literal">nil</span>] <span class="keyword">as</span> [<span class="type">String</span>: <span class="type">Any</span>?]</span><br><span class="line"><span class="keyword">let</span> json = <span class="type">JSON</span>(dict)</span><br><span class="line"><span class="keyword">let</span> representation = json.rawString(options: [.castNilToNSNull: <span class="literal">true</span>])</span><br><span class="line"><span class="comment">// representation is "&#123;\"1\":2,\"2\":\"two\",\"3\":null&#125;", which represents &#123;"1":2,"2":"two","3":null&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="和-Alamofire-一起使用"><a href="#和-Alamofire-一起使用" class="headerlink" title="和 Alamofire 一起使用"></a>和 Alamofire 一起使用</h2><p>SWiftyJSON 很好地包装了 Alamofire JSON 相应的结果：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Alamofire</span>.request(url, mothod: .<span class="keyword">get</span>).validate().responseJSON &#123;</span><br><span class="line">  response <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">switch</span> response.result &#123;</span><br><span class="line">    <span class="keyword">case</span> .success(<span class="keyword">let</span> value):</span><br><span class="line">    	<span class="keyword">let</span> json = <span class="type">JSON</span>(value)</span><br><span class="line">    	<span class="built_in">print</span>(<span class="string">"JSON:<span class="subst">\(json)</span>"</span>)</span><br><span class="line">    <span class="keyword">case</span> .failure(<span class="keyword">let</span> error):</span><br><span class="line">    	<span class="built_in">print</span>(error)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Alamofire</span>.request(url, mothod: .<span class="keyword">get</span>).validate().responseJSON &#123;</span><br><span class="line">  response <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">switch</span> response.result &#123;</span><br><span class="line">    <span class="keyword">case</span> .success(<span class="keyword">let</span> value):</span><br><span class="line">    	<span class="keyword">let</span> json = <span class="type">JSON</span>(value)</span><br><span class="line">    	<span class="built_in">print</span>(<span class="string">"JSON:\(json)"</span>)</span><br><span class="line">    <span class="keyword">case</span> .failure(<span class="keyword">let</span> error):</span><br><span class="line">    	<span class="built_in">print</span>(error)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </section>
 
@@ -275,7 +275,7 @@
     
                
             <div class="read-more-item">
-                <span class="read-more-item-dim">新しい記事</span>
+                <span class="read-more-item-dim">Newer Post</span>
                 <h2 class="post-list__post-title post-title"><a href="/2017/05/27/iOS小知识-使用AutoLayout循环创建控件/" title="iOS小知识-使用AutoLayout循环创建控件">iOS小知识-使用AutoLayout循环创建控件</a></h2>
                 <p class="excerpt">
                 
@@ -290,7 +290,7 @@
         
                
             <div class="read-more-item">
-                <span class="read-more-item-dim">以前の記事</span>
+                <span class="read-more-item-dim">Older Post</span>
                 <h2 class="post-list__post-title post-title"><a href="/2017/01/27/总结Ubuntu下部署LNMP环境/" title="总结Ubuntu下部署LNMP环境">总结Ubuntu下部署LNMP环境</a></h2>
                 <p class="excerpt">
                 
