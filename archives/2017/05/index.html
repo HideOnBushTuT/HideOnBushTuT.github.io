@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>CBReno&#39;s Blog</title>
+    <title>CBReno</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -12,15 +12,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta name="description" content="Welcome !~">
+    <meta name="description" content="iOSer 现在正在学习Kotlin写后台。。。">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="CBReno&#39;s Blog">
-    <meta name="twitter:description" content="Welcome !~">
+    <meta name="twitter:title" content="CBReno">
+    <meta name="twitter:description" content="iOSer 现在正在学习Kotlin写后台。。。">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="CBReno&#39;s Blog">
-    <meta property="og:description" content="Welcome !~">
+    <meta property="og:title" content="CBReno">
+    <meta property="og:description" content="iOSer 现在正在学习Kotlin写后台。。。">
 
     
     <meta name="author" content="CBReno">
@@ -37,11 +37,12 @@
 
     <link rel="canonical" href="http://yoursite.com"/>
 
-    
+                 
 </head>
 
 <body class="home-template no-js">
-
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
     <span class="mobile btn-mobile-menu">
         <i class="fa fa-list btn-mobile-menu__icon"></i>
         <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
@@ -53,18 +54,22 @@
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
 
-        <a href="/" title="前往 CBReno&#39;s Blog 的主页"><img src="/images/cbreno.jpg" width="80" alt="CBReno&#39;s Blog logo" class="panel-cover__logo logo" /></a>
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for CBReno&#39;s Blog">CBReno&#39;s Blog</a></h1>
+        <a href="/" title="前往 CBReno 的主页"><img src="/images/cbreno.jpg" width="80" alt="CBReno logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for CBReno">CBReno</a></h1>
         
         <hr class="panel-cover__divider" />
-        <p class="panel-cover__description">Welcome !~</p>
+        <p class="panel-cover__description">iOSer 现在正在学习Kotlin写后台。。。</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary" />
 
         <div class="navigation-wrapper">
           <div>
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">文字阁</a></li>
+            
+              <li class="navigation__item"><a href="/archives">Archives</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
             
             </ul>
           </nav>
@@ -76,7 +81,7 @@
   <!-- Weibo-->
   
   <li class="navigation__item">
-    <a href="http://weibo.com/CBReno" title="我的微博" target="_blank">
+    <a href="https://weibo.com/CBReno" title="我的微博" target="_blank">
       <i class='social fa fa-weibo'></i>
       <span class="label">Weibo</span>
     </a>
@@ -119,7 +124,7 @@
     </div>
 
     <div class="panel-cover--overlay cover-blue"></div>
-  </div>
+  </div> 
 </header>
 
     <div class="content-wrapper">
@@ -135,12 +140,10 @@
     
       
 前言​    之前在项目中布局一直使用的AutoLayout，但是在碰到轮播图这种需要循环创建控件并且设置每个控件的布局的时候，就偷懒直接使用frame来做。直到最近一次面试，面试官问道我这个问题的时候，我就懵逼了。所以在面试的时候当场想了想，给出了一种答案，但是自己对于这种方案很没有底。面试完后，回来自己试了一试。以下就是我的做法。（个人感觉做法很丑陋，不知各位大佬有何高见，小弟虚心请教）
-正文
-首先设置一个全局的数组来存放循环创建的控件。作用是：为了之后在方便设置布局。
-1var view
+正
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2017-05-27T09:59:48.000Z" class="post-list__meta--date date">2017-05-27</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2017/05/27/iOS小知识-使用AutoLayout循环创建控件/">继续阅读</a></div>
+      <div class="post-list__meta"><time datetime="2017-05-27T09:59:48.000Z" class="post-list__meta--date date">2017-05-27</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2017/05/27/iOS小知识-使用AutoLayout循环创建控件/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   
@@ -148,31 +151,50 @@
   </ol>
 
 
-
+ <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+    
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </div>
-
 
 
             <footer class="footer">
     <span class="footer__copyright">
-        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+        &copy; 2018 CBReno - 本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+       
     </span>
     <span class="footer__copyright">
-        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
-    </span>
-    <span class="footer__copyright">
-        &copy; 2018 - 本站由 <a href="/">@Longbo Ma</a> 创建,
-        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
-        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
-    </span>
+             - 基于 <a href="http://hexo.io">Hexo</a> 搭建，使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题，由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+         </span>
+       
+    
+    
 </footer>
+
 
         </div>
     </div>
 
-    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-
      
+    
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
 </body>
 </html>
