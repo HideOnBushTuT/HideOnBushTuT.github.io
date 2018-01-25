@@ -133,16 +133,63 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/12/31/2016年个人总结/" title="link to post.title">菜逼2016年个人总结</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2017/07/02/iOS小知识-load-initialize/" title="link to post.title">iOS小知识-load()&amp;initialize()</a></h2>
+      <p class="excerpt">
+    
+      前言之前在面试中被问到关于 load 和 initialize，虽然之前在网上有看到过相关的资料，但是却没有仔细看过，也没有实际得在项目中使用过，所以被问到就一脸闷逼。。最近在看一些基础的知识，对于这两个方法也有点了解，所以做个整理。
+介绍这两个方法都是NSObject下用来初始化类的类方法。
+12345//Swiftclass func initialize()//Objective-C+ (v
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-07-01T16:26:48.000Z" class="post-list__meta--date date">2017-07-02</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/iOS/">iOS</a>
+</span><a class="btn-border-small" href="/2017/07/02/iOS小知识-load-initialize/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/06/13/GCD/" title="link to post.title">GCD</a></h2>
+      <p class="excerpt">
+    
+      概念多线程编程 先来看一下下面的代码。
+12345int main() &amp;#123;  id o = [[MyObject alloc] init];  [o execBlock];  return 0;&amp;#125;
+上面的代码最终会转化为机器能够识别的指令（二进制代码）。然后这些命令在 CPU 中一句一句的执行。由于一个 CPU 一次只能执行一个命令，不能执行某处分开的并列的两个命令，因此通过 
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-06-13T07:36:37.000Z" class="post-list__meta--date date">2017-06-13</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/iOS/">iOS</a>
+</span><a class="btn-border-small" href="/2017/06/13/GCD/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/05/27/iOS小知识-使用AutoLayout循环创建控件/" title="link to post.title">iOS小知识-使用AutoLayout循环创建控件</a></h2>
       <p class="excerpt">
     
       
-2016年就要过去了，稍微总结一下吧，再展望一下2017年吧！
+前言​    之前在项目中布局一直使用的AutoLayout，但是在碰到轮播图这种需要循环创建控件并且设置每个控件的布局的时候，就偷懒直接使用frame来做。直到最近一次面试，面试官问道我这个问题的时候，我就懵逼了。所以在面试的时候当场想了想，给出了一种答案，但是自己对于这种方案很没有底。面试完后，回来自己试了一试。以下就是我的做法。（个人感觉做法很丑陋，不知各位大佬有何高见，小弟虚心请教）
+正
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2016-12-31T09:21:47.000Z" class="post-list__meta--date date">2016-12-31</time> &#8226; <span class="post-list__meta--tags tags">于 
-  <a class="tag-link" href="/tags/杂谈/">杂谈</a>
-</span><a class="btn-border-small" href="/2016/12/31/2016年个人总结/">继续阅读</a></div>
+      <div class="post-list__meta"><time datetime="2017-05-27T09:59:48.000Z" class="post-list__meta--date date">2017-05-27</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/iOS/">iOS</a>
+</span><a class="btn-border-small" href="/2017/05/27/iOS小知识-使用AutoLayout循环创建控件/">继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2017/02/12/SwiftyJSON 中文文档翻译/" title="link to post.title">SwiftyJSON中文文档翻译</a></h2>
+      <p class="excerpt">
+    
+      最近正在编写 iOS APP 的后台接口，调试的时候要解析JSON数据，所以就来学习使用 SwiftyJSON 这个第三方库，但网上搜的资料感觉写的都不怎么样，最后就只能硬着头皮看官方的文档了，尝试着翻译，借此机会学习并且提高一下自己的 English 水平吧。Let’s GO. (PS: 虽然官网也有中文翻译，但是好像不是很全。。。。。😆).如果有翻译错误❎，请见谅也请指出，谢谢！
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2017-02-12T15:36:32.000Z" class="post-list__meta--date date">2017-02-12</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/iOS/">iOS</a>
+</span><a class="btn-border-small" href="/2017/02/12/SwiftyJSON 中文文档翻译/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   

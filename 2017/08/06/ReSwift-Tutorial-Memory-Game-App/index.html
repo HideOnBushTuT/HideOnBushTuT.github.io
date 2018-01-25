@@ -65,7 +65,7 @@
           <div>
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="/#blog" title="Visit the blog" class="blog-button">Blog</a></li>
+              <li class="navigation__item"><a href="/#blog" title="Blogを読む" class="blog-button">Blog</a></li>
             
               <li class="navigation__item"><a href="/aboutme">关于我</a></li>
             
@@ -131,9 +131,11 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2017-08-06T07:06:02.000Z" class="post-list__meta--date date">2017-08-06</time> &#8226; <span class="post-meta__tags tags">于  </span>
+      <time datetime="2017-08-06T07:06:02.000Z" class="post-list__meta--date date">2017-08-06</time> &#8226; <span class="post-meta__tags tags">于 
+  <a class="tag-link" href="/tags/Swift-Redux/">Swift , Redux</a>
+ </span>
       <span class="page-pv">
-       Read <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+       No. <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
@@ -235,14 +237,9 @@
 <blockquote>
 <p><strong>Note:</strong> 你可能已经注意到了，ReSwift 喜欢不可变性-重度使用结构体（值引用）而不是对象。同样鼓励你来写声明式的UI代码。为什么呢？</p>
 <p><code>newState</code> 回调–定义在<code>StoreSubscriber</code>  传递了状态的改变。你可能会在属性中捕获状态的值，就像这样：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">MenuTableViewController</span>: <span class="title">UITableViewController</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> currentMenuTitlesState: [<span class="type">String</span>]</span><br><span class="line">  ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是编写声明式的UI代码清楚地显示了状态是如何转化成视图，这种方式更加干净。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;  <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">MenuTableViewController</span>: <span class="title">UITableViewController</span> </span>&#123;</span><br><span class="line">&gt;    <span class="keyword">var</span> currentMenuTitlesState: [<span class="type">String</span>]</span><br><span class="line">&gt;    ....</span><br><span class="line">&gt;  &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<p>净并且更加容易效仿。这个例子中的问题是 <code>UITableView</code>并没有声明式的API。这就是为什么我创建了 <code>TableDataSource.swift</code>。</p>
-<p>编译并运行，你将看到菜单选项：<br><img src="/2017/08/06/ReSwift-Tutorial-Memory-Game-App/MenuView.png" alt="MenuView"></p>
-<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p><img src="/2017/08/06/ReSwift-Tutorial-Memory-Game-App/Action.png" alt="Action"></p>
-<p>现在你有菜单选项，如果它们打开新的页面那么就会很棒。是时候写你的第一个事件了。<br>事件改变了Store。一个事件是一个简单的结构用来存储变量：事件的参数。一个 Reducer 持有一个被分发的时间并且根据事件的类型和它的参数来改变应用的状态。<br>在 <code>RoutingAction.swift</code> 中创建一个事件：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ReSwift</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">RoutingAction</span>: <span class="title">Action</span> </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> destination: <span class="type">RoutingDestination</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&gt; 但是编写声明式的UI代码清楚地显示了状态是如何转化成视图，这种方式更加干净。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">净并且更加容易效仿。这个例子中的问题是 `UITableView `并没有声明式的API。这就是为什么我创建了 `TableDataSource.swift`。</span><br><span class="line"></span><br><span class="line">编译并运行，你将看到菜单选项：</span><br><span class="line">![MenuView](ReSwift-Tutorial-Memory-Game-App/MenuView.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 事件</span><br><span class="line"></span><br><span class="line">![Action](ReSwift-Tutorial-Memory-Game-App/Action.png)</span><br><span class="line"></span><br><span class="line">现在你有菜单选项，如果它们打开新的页面那么就会很棒。是时候写你的第一个事件了。</span><br><span class="line">事件改变了Store。一个事件是一个简单的结构用来存储变量：事件的参数。一个 Reducer 持有一个被分发的时间并且根据事件的类型和它的参数来改变应用的状态。</span><br><span class="line">在 `RoutingAction.swift` 中创建一个事件：</span><br><span class="line"></span><br><span class="line">​```swift</span><br><span class="line">import ReSwift</span><br><span class="line"></span><br><span class="line">struct RoutingAction: Action &#123;</span><br><span class="line">  let destination: RoutingDestination</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>RoutingAction</code> 改变当前的路由<code>destination</code>。</p>
 <p>现在你将要分发 <code>RoutingAction</code> 当一个菜单按钮被点按。</p>
 <p>打开 <code>MenuTableViewController.swift</code> 并且添加一下代码到 <code>MenuTableViewController</code>:</p>
@@ -376,7 +373,7 @@
     
                
             <div class="read-more-item">
-                <span class="read-more-item-dim">Newer Post</span>
+                <span class="read-more-item-dim">新しい記事</span>
                 <h2 class="post-list__post-title post-title"><a href="/2017/08/20/JavaScript-之-this/" title="JavaScript 之 this">JavaScript 之 this</a></h2>
                 <p class="excerpt">
                 
@@ -392,14 +389,18 @@
         
                
             <div class="read-more-item">
-                <span class="read-more-item-dim">Older Post</span>
-                <h2 class="post-list__post-title post-title"><a href="/2017/07/13/笔记-IM相关知识/" title="[笔记]IM相关知识">[笔记]IM相关知识</a></h2>
+                <span class="read-more-item-dim">以前の記事</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/07/02/iOS小知识-load-initialize/" title="iOS小知识-load()&amp;initialize()">iOS小知识-load()&amp;initialize()</a></h2>
                 <p class="excerpt">
                 
-                本文是对于《iOS即时通讯，从入门到“放弃”？》涂耀辉  中即时通讯相关知识的总结，方便自己理解，如需更多了解，请看原文，如有侵权，请告知
+                前言之前在面试中被问到关于 load 和 initialize，虽然之前在网上有看到过相关的资料，但是却没有仔细看过，也没有实际得在项目中使用过，所以被问到就一脸闷逼。。最近在看一些基础的知识，对于这两个方法也有点了解，所以做个整理。
+介绍这两个方法都是NSObject下用来初始化类的类方法。
+12
                 &hellip;
                 </p>
-                <div class="post-list__meta"><time datetime="2017-07-13T08:38:19.000Z" class="post-list__meta--date date">2017-07-13</time> &#8226; <span class="post-list__meta--tags tags">于 </span><a class="btn-border-small" href="/2017/07/13/笔记-IM相关知识/">继续阅读</a></div>
+                <div class="post-list__meta"><time datetime="2017-07-01T16:26:48.000Z" class="post-list__meta--date date">2017-07-02</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/iOS/">iOS</a>
+</span><a class="btn-border-small" href="/2017/07/02/iOS小知识-load-initialize/">继续阅读</a></div>
                        
             </div>
         
